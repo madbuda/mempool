@@ -1,13 +1,13 @@
-# Bitcoin Mempool Statistics
+# Zcash Mempool Statistics
 
-This is the code to create the mempool statistics for bitcoin that are online
-at https://jochen-hoenicke.de/queue/
+This is the code to create the mempool statistics for zcash that will be online
+at https://insight.mercerweiss.com/queue
 
 ## Installation: Part 1 - Logging
 
 You need to be running a bitcoin full node.  It can be a pruned node or an
 archival node.  I assume you have already set it up.  You also need to
-support RPC to this node.  Add rpcuser/rpcpassword to bitcoin.conf to enable
+support RPC to this node.  Add rpcuser/rpcpassword to zcash.conf to enable
 this.
 
 I recommend to create a new user `mempool`.   Checkout this repository into
@@ -15,14 +15,14 @@ his home directory:
 
     sudo -H -u mempool bash
     cd $HOME
-    git clone https://github.com/jhoenicke/mempool
+    git clone https://github.com/radix42/mempool
 
 Edit `mempool.sh` to adapt paths as necessary, especially the path to 
-bitcoin-cli.  Add a bitcoin.conf with rpcuser/rpcpassword settings to 
-`/home/mempool/.bitcoin`, to be able to use bitcoin-cli.  You can test your
+zcash-cli.  Add a zcash.conf with rpcuser/rpcpassword settings to 
+`/home/mempool/.zcash`, to be able to use zcash-cli.  You can test your
 setup by running
 
-    bitcoin-cli getinfo
+    zcash-cli getinfo
 
 Install `sqlite3` and create a new empty database. Then you can test your
 configuration by running mempool.sh
