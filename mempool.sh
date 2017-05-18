@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BITCOINCLI=/home/bitcoind/bin/bitcoin-cli
+BITCOINCLI=/usr/local/bin/zcash-cli
 MEMPOOLHOME=/home/mempool/mempool
 
 cd $MEMPOOLHOME
